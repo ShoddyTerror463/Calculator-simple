@@ -1,5 +1,6 @@
 from pyscript import when, display
 from pyscript import document
+import math
 
 
 def inputFill(event):
@@ -42,6 +43,7 @@ def outputFill(event):
         equation = document.querySelector('#answerInput').textContent
         try:
             answer = eval(equation)
+            round(answer,5)
             document.querySelector('#answerOutput').textContent = answer
             pastCalculation1 = f"Input: {equation}"
             pastCalculation2 = f"Output: {answer}"
