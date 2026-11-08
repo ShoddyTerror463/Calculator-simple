@@ -1,6 +1,7 @@
 from pyscript import when, display
 from pyscript import document
 
+
 def inputFill(event):
     if document.querySelector('#answerInput').textContent == 'Input':
         document.querySelector('#answerInput').textContent = ''
@@ -32,19 +33,22 @@ def inputFill(event):
     elif event.target.id == 'decimal':
         document.querySelector('#answerInput').textContent += '.'   
     else:
-        document.querySelector('#answerInput').textContent += 'Idk'
+        document.querySelector('#answerInput').textContent += 'Error'
 
 def outputFill(event):
     if document.querySelector('#answerInput').textContent == 'Input':
         document.querySelector('#answerOutput').textContent == 'Please type in something'
     else:
         equation = document.querySelector('#answerInput').textContent
-        answer = eval(equation)
-        document.querySelector('#answerOutput').textContent = answer
-
-        pastCalculation1 = f"Input: {equation}"
-        pastCalculation2 = f"Output: {answer}"
-        document.querySelector('#pastCalcContainer').textContent += pastCalculation1 + ' ' + pastCalculation2 + '; '
+        try:
+            answer = eval(equation)
+            document.querySelector('#answerOutput').textContent = answer
+            pastCalculation1 = f"Input: {equation}"
+            pastCalculation2 = f"Output: {answer}"
+            document.querySelector('#pastCalcContainer').textContent += pastCalculation1 + ' ' + pastCalculation2 + '; '
+        except:
+            document.querySelector('#answerOutput').textContent = 'Syntax error'
+        
 
 def clear(event):
     document.querySelector('#answerInput').textContent = ''
