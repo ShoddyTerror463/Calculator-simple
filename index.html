@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <script type="py" src="./main.py"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Game</title>
+</head>
+<body>
+    <div id="calcBox">
+        <h1 id="title">Calculator</h1>
+
+        <div class="answerContainer">
+            <div id="answerInput">Input</div>
+            <div id="answerOutput">Output</div>
+        </div>
+
+        <div id="buttonContainer">
+            <button py-click="inputFill" id="1" class="calcButton">1</button>
+            <button py-click="inputFill" id="2" class="calcButton">2</button>
+            <button py-click="inputFill" id="3" class="calcButton">3</button>
+            <button py-click="inputFill" id="4" class="calcButton">4</button>
+            <button py-click="inputFill" id="5" class="calcButton">5</button>
+            <button py-click="inputFill" id="6" class="calcButton">6</button>
+            <button py-click="inputFill" id="7" class="calcButton">7</button>
+            <button py-click="inputFill" id="8" class="calcButton">8</button>
+            <button py-click="inputFill" id="9" class="calcButton">9</button>
+            <button py-click="inputFill" id="0" class="calcButton">0</button>
+            <button py-click="inputFill" id="decimal" class="calcButton">.</button>
+        </div>
+
+        <div id="operatorContainer">
+            <button py-click="inputFill" id="plus" class="operatorButton">+</button>
+            <button  py-click="inputFill" id="subtract" class="operatorButton">-</button>
+            <button py-click='outputFill' id="equals" class="operatorButton">=</button>
+            <button py-click="clear" id="clearall" class="operatorButton">AC</button>
+        </div>
+
+        <h3>Past Calculations:</h3>
+        <list id="pastCalcContainer"></list>
+    </div>
+</body>
+</html>

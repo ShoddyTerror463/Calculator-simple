@@ -1,0 +1,82 @@
+body {
+  background-color: rgb(250, 243, 215);
+  font-family: Rockwell;
+}
+
+#calcBox {
+    width: 50%;
+    display: grid;
+    align-items: center;
+}
+
+#buttonContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    padding: 10px;
+    align-content: center;
+    font-family: fantasy;
+}
+
+.calcButton {
+    background-color: rgb(251, 192, 133);
+    padding: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 50px, 30px;
+}
+
+#operatorContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    align-content: center;
+    
+}
+
+.operatorButton {
+    background-color: rgb(101, 225, 151);
+    padding: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+#answerInput {
+    padding: 50px;
+    margin: 10px;
+    background-color: rgb(215, 232, 247);
+    border-radius: 10px;
+}
+
+#answerOutput {
+    padding: 50px;
+    margin: 10px;
+    background-color: rgb(215, 232, 247);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#equals {
+    background-color: indianred;
+}
+
+#equals:active {
+    background-color: rgb(230, 188, 188);
+}
+
+.operatorButton:active {
+    background-color: aquamarine;
+}
+
+.calcButton:active {
+    background-color: antiquewhite;
+}
+
+#clearall {
+    background-color: rgb(213, 183, 37);
+}
+
+#clearall:active {
+    background-color: rgb(236, 210, 79);
+}
